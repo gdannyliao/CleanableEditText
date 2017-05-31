@@ -42,7 +42,7 @@ public class CleanableEditText extends AppCompatEditText {
 		}
 
 		if (cleanButtonStyle == 0) {
-			return;
+			cleanButtonStyle = R.drawable.selector_clear;
 		}
 
 		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {

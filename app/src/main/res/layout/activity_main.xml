@@ -16,8 +16,7 @@
 	<com.ggdsn.cleanableedittextcore.CleanableEditText
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		app:cleanButton="@android:drawable/btn_dialog"
-		android:text="随意输入点什么"
+		android:id="@+id/cleanableEditText"
 		android:hint="这只是一个提示"
 		/>
 </RelativeLayout>
