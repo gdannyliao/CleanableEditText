@@ -73,7 +73,7 @@ class CleanableEditText : AppCompatEditText {
         }
 
         val padding = dp2pxInt(12f)
-        return width - padding - cleanDrawable.intrinsicWidth <= x
+        return width - (padding shl 1) - cleanDrawable.intrinsicWidth <= x
                 && x <= width
                 && height - padding - cleanDrawable.intrinsicHeight <= y
                 && y <= height
