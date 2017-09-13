@@ -1,9 +1,11 @@
 package com.ggdsn.cleanableedittextcore
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.support.v7.widget.AppCompatEditText
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.MotionEvent
 
 /**
@@ -65,9 +67,15 @@ class CleanableEditText : AppCompatEditText {
     }
 
     private fun isInCleanButton(x: Float, y: Float): Boolean {
-        return width - paddingRight - cleanDrawable.intrinsicWidth <= x
+        fun dp2pxInt(dpValue: Float): Int {
+            val metrics = Resources.getSystem().displayMetrics
+            return (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpValue, metrics) + 0.5f).toInt()
+        }
+
+        val padding = dp2pxInt(12f)
+        return width - padding - cleanDrawable.intrinsicWidth <= x
                 && x <= width
-                && height - paddingBottom - cleanDrawable.intrinsicHeight <= y
+                && height - padding - cleanDrawable.intrinsicHeight <= y
                 && y <= height
     }
 
