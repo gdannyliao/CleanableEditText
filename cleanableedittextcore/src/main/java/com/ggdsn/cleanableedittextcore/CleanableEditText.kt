@@ -32,13 +32,13 @@ class CleanableEditText : AppCompatEditText {
         val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.CleanableEditText, 0, 0)
 
         try {
-            cleanButtonStyle = typedArray.getResourceId(R.styleable.CleanableEditText_cleanButton, 0)
+            cleanButtonStyle = typedArray.getResourceId(R.styleable.CleanableEditText_cleanableEditTextCleanButton, 0)
         } finally {
             typedArray.recycle()
         }
 
         if (cleanButtonStyle == 0) {
-            cleanButtonStyle = R.drawable.selector_clear
+            cleanButtonStyle = R.drawable.cleanable_edittext_selector_clear
         }
 
         cleanDrawable = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {

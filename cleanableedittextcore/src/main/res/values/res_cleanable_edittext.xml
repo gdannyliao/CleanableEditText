@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<declare-styleable name="CleanableEditText">
-		<attr name="cleanButton"
+		<attr name="cleanableEditTextCleanButton"
 			format="reference"/>
 	</declare-styleable>
-	<color name="yellow">#ffcc00</color>
+	<color name="cleanableEditTextYellow">#ffcc00</color>
 </resources>
